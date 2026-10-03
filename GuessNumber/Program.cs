@@ -51,15 +51,89 @@
 // Console.WriteLine(result2);
 
 
-Console.Write("Введите ваш возраст: ");
-int age = int.Parse(Console.ReadLine());
-string ageGroup = age >= 18 ? "совершеннолетний" : " несовершеннолетний";
-Console.WriteLine($"Вы {ageGroup}.");
-Console.Write("\nВведите температуру за окном (°C): ");
-double temp = double.Parse(Console.ReadLine());
-string weather = temp >= 20 ? "тепло" : (temp >= 0 ? "прохладно" : "мороз");
-Console.WriteLine($"За окном {weather}.");
-Console.Write("\nВведите число: ");
-int n = int.Parse(Console.ReadLine());
-string parity = n % 2 == 0 ? "чётное" : "нечётное";
-Console.WriteLine($"Число {n} - {parity}.");
+// Console.Write("Введите ваш возраст: ");
+// int age = int.Parse(Console.ReadLine());
+// string ageGroup = age >= 18 ? "совершеннолетний" : " несовершеннолетний";
+// Console.WriteLine($"Вы {ageGroup}.");
+// Console.Write("\nВведите температуру за окном (°C): ");
+// double temp = double.Parse(Console.ReadLine());
+// string weather = temp >= 20 ? "тепло" : (temp >= 0 ? "прохладно" : "мороз");
+// Console.WriteLine($"За окном {weather}.");
+// Console.Write("\nВведите число: ");
+// int n = int.Parse(Console.ReadLine());
+// string parity = n % 2 == 0 ? "чётное" : "нечётное";
+// Console.WriteLine($"Число {n} - {parity}.");
+
+
+Console.WriteLine("Меню");
+Console.WriteLine("1. Посмотреть расписание");
+Console.WriteLine("2. Посмотреть оценки");
+Console.WriteLine("3. Связаться с преподавателем");
+Console.WriteLine("4. Выйти");
+Console.Write("Выберите пункт (1-4): ");
+string choice = Console.ReadLine();
+switch (choice) {
+    case "1":
+        Console.WriteLine("Расписание: исп-241, каб. 303, 08:30");
+        break;
+    case "2":
+        Console.WriteLine("Ваши оценки: ИРСПО - 20, РМП - 35,");
+        break;
+    case "3":
+        Console.WriteLine("Email: denis.leontev92@yandex.ru");
+        break;
+    case "4":
+        Console.WriteLine("До свидания!");
+        break;
+    default:
+        Console.WriteLine($"Ошибка: пункт «{choice}» не существует. Введите число от 1 до 4.");
+        break;
+}
+
+
+Console.Write("\nВведите номер дня недели (1-7): "); int dayNumber = int.Parse(Console.ReadLine());
+switch (dayNumber) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        Console.WriteLine("Рабочий день - пора учиться!");
+        break;
+    case 6:
+    case 7:
+        Console.WriteLine("Выходной - заслуженный отдых.");
+        break;
+    default:
+        Console.WriteLine("Такого дня не существует.");
+        break;
+}
+
+
+Console.Write("\nВведите номер месяца (1-12): ");
+int monthNumber = int.Parse(Console.ReadLine());
+switch (monthNumber) {
+    case 1:
+    case 2:
+    case 12:
+        Console.WriteLine("Зима");
+        break;
+    case 3:
+    case 4:
+    case 5:
+        Console.WriteLine("Весна");
+        break;
+    case 6:
+    case 7:
+    case 8:
+        Console.WriteLine("Лето");
+        break;
+    case 9:
+    case 10:
+    case 11:
+        Console.WriteLine("Осень");
+        break;
+    default:
+        Console.WriteLine("Ошибка, введите номер месяца от 1 до 12");
+        break;
+}
